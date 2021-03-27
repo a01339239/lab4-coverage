@@ -16,6 +16,7 @@ lab3\directory.py       55      0     12      1    99%   56->62
 TOTAL                  107      0     36      1    99%
 ```
 ### Coverage results after adding tests for find_words() and find_numbers().
+Check this [commit](https://github.com/a01339239/lab4-coverage/commit/8a4fed4d80b90385192a1c9ea277f91721c0d42c).
 ```
 Name                  Stmts   Miss Branch BrPart  Cover   Missing
 -----------------------------------------------------------------
@@ -32,6 +33,7 @@ lab3\directory.py        55      0     12      1    99%   65->71
 TOTAL                   154      5     56      2    97%
 ```
 ### Coverage results after attending missing column from report.
+Check this [commit](https://github.com/a01339239/lab4-coverage/commit/b2d150c7d6feb949174d416868a8ef1da6e4964e).
 ```
 Name                  Stmts   Miss Branch BrPart  Cover   Missing
 -----------------------------------------------------------------
@@ -101,7 +103,7 @@ TOTAL                   153      0     54      0   100%
         D104: Missing docstring in public package
 ```
 ### pydocstyle results after first fixes. 
-Check this [commit](https://github.com/a01339239/lab4-coverage/commit/e88b8e4e8cbefc8f35ea5d6c205402dd7e9dd361) and this [commit](https://github.com/a01339239/lab4-coverage/commit/1eb67ce7c71b0578004138d709ca6d47fdcefedd)
+Check this [commit](https://github.com/a01339239/lab4-coverage/commit/e88b8e4e8cbefc8f35ea5d6c205402dd7e9dd361) and this [commit](https://github.com/a01339239/lab4-coverage/commit/1eb67ce7c71b0578004138d709ca6d47fdcefedd).
 ```
 .\tests\test_find_number.py:4 in public class `TestFindNumberCases`:
         D101: Missing docstring in public class
