@@ -4,7 +4,10 @@ from lab2.profit import profit
 
 
 class TestProfitTestCases(unittest.TestCase):
+    """Test cases for profit module."""
+
     def test_profit__success(self):
+        """Test profit works appropriately."""
         test_cases = (
             (
                 {

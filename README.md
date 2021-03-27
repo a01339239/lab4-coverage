@@ -1,4 +1,6 @@
-# Lab 4: Coverage
+# Lab 4: Coverage and Pydocstyle
+
+## Coverage.
 ### Initial coverage results.
 ```
 Name                 Stmts   Miss Branch BrPart  Cover   Missing
@@ -12,8 +14,9 @@ lab3\__init__.py         0      0      0      0   100%
 lab3\directory.py       55      0     12      1    99%   56->62
 ----------------------------------------------------------------
 TOTAL                  107      0     36      1    99%
-
 ```
+
+## Pydocstyle.
 ### Initial pydocstyle results.
 ```
 .\lab1\convert_2x.py:1 at module level:
@@ -64,4 +67,16 @@ TOTAL                  107      0     36      1    99%
         D104: Missing docstring in public package
 .\tests\__init__.py:1 at module level:
         D104: Missing docstring in public package
+```
+
+### pydocstyle results after first fixes.
+```
+.\tests\test_find_number.py:4 in public class `TestFindNumberCases`:
+        D101: Missing docstring in public class
+.\tests\test_find_number.py:6 in public method `test_find_number`:
+        D102: Missing docstring in public method
+.\tests\test_find_words.py:4 in public class `TestFindWordsCases`:
+        D101: Missing docstring in public class
+.\tests\test_find_words.py:6 in public method `test_find_words`:
+        D102: Missing docstring in public method
 ```

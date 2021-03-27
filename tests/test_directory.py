@@ -10,11 +10,15 @@ from lab3.directory import Directory, Record
 
 
 class TestDirectoryCases(TestCase):
+    """Test decimal to binary conversion works appropriately."""
+
     def setUp(self):
+        """Set new dictionary before each test."""
         self.directory = Directory()
 
     @staticmethod
     def get_random_record(id_: Optional[str] = None) -> Record:
+        """Get a record with random values."""
         randomizer = randint(1, 10)
         return Record(
             id=id_,
@@ -26,13 +30,12 @@ class TestDirectoryCases(TestCase):
 
     def test_directory__boundary_conditions(self):
         """
-        Test boundary conditions with:
+        Test boundary conditions.
+
         - creating and looking for a record with a custom id.
         - deleting a record that does no exist.
         - looking for records that match the same filter.
         - looking for a record that does not exist.
-
-        :return:
         """
         # Create and look for record with custom id
         r1 = self.get_random_record(id_="1")
@@ -53,11 +56,9 @@ class TestDirectoryCases(TestCase):
     @mock.patch("lab3.directory.pprint")
     def test_directory__inverse_relationships(self, mock_print):
         """
-        Test available inverse relationships:
-        - add and delete one and multiple records.
+        Test available inverse relationships.
 
-        :param mock_print: patch of pprint.
-        :return:
+        - add and delete one and multiple records.
         """
         # Add and delete one record
         r1 = self.get_random_record()
@@ -85,12 +86,10 @@ class TestDirectoryCases(TestCase):
     @mock.patch("lab3.directory.pprint")
     def test_directory__cross_checking(self, mock_print):
         """
-        Cross-checking tests by:
+        Cross-checking tests.
+
         - comparing print arguments with directory.json contents.
         - manually adding records instead of using Directory().add_record().
-
-        :param mock_print: patch of pprint.
-        :return:
         """
         # Display directory and reading file
         recs = [self.get_random_record() for _ in range(10)]
@@ -115,11 +114,10 @@ class TestDirectoryCases(TestCase):
 
     def test_directory__error_conditions(self):
         """
-        Test error conditions by:
+        Test error conditions.
+
         - adding a non-dataclass class as if it were a Record instance.
         - altering the directory.json file and calling Directory().add_record().
-
-        :return:
         """
         # Add non-dataclass class
         no_record = mock.Mock()
@@ -137,13 +135,11 @@ class TestDirectoryCases(TestCase):
     @mock.patch("lab3.directory.pprint")
     def test_directory__performance(self, _):
         """
-        Test performance by requiring a maximum execution time when:
+        Test performance by requiring a maximum execution time.
+
         - adding many records to directory.
         - displaying many records.
         - deleting many records.
-
-        :param _:
-        :return:
         """
         # Add many records to dir
         recs = [self.get_random_record() for _ in range(10)]

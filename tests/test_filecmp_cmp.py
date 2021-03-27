@@ -6,19 +6,20 @@ from pathlib import Path
 
 
 class TestFilecmpCmpCases(unittest.TestCase):
+    """Test cases for filecmp cmp function."""
+
     test_files_base_path = Path(Path.cwd(), "tests", "files")
 
     def test_filecmp_cmp__boundary_conditions(self):
         """
-        Test boundary conditions with:
+        Test boundary conditions.
+
         - two different empty files.
         - the same file.
         - same file with different encoding.
         - two files with only a newline as difference.
         - a hidden file.
         - two files with only a character as difference.
-
-        :return:
         """
         SubTestCase = namedtuple("SubTestCase", ("f1", "f2", "expected_cmp"))
         sub_tests = (
@@ -59,19 +60,9 @@ class TestFilecmpCmpCases(unittest.TestCase):
             ):
                 self.assertEqual(cmp(sub_test.f1, sub_test.f2), sub_test.expected_cmp)
 
-    def test_filecmp_cmp__inverse_relationships(self):
-        """ There's really no inverse for cmp. """
-        pass
-
     @staticmethod
     def custom_file_compare(f1_name: str, f2_name: str) -> bool:
-        """
-        Compare two files by reading them and loading their contents to variables as strings.
-
-        :param f1_name: first file name.
-        :param f2_name: second file name.
-        :return: True when equal, False otherwise.
-        """
+        """Compare two files by reading them and loading their contents to variables as strings."""
         with open(f1_name, encoding="utf-8") as f1:
             f1_content = f1.read()
         with open(f2_name, encoding="utf-8") as f2:
@@ -79,11 +70,7 @@ class TestFilecmpCmpCases(unittest.TestCase):
         return f1_content == f2_content
 
     def test_filecmp_cmp__cross_checking(self):
-        """
-        Cross-checking tests with custom_file_compare function.
-
-        :return:
-        """
+        """Cross-checking tests with custom_file_compare function."""
         SubTestCase = namedtuple("SubTestCase", ("f1", "f2"))
 
         sub_tests = (
@@ -109,13 +96,12 @@ class TestFilecmpCmpCases(unittest.TestCase):
 
     def test_filecmp_cmp__error_conditions(self):
         """
-        Test error conditions with:
+        Test error conditions.
+
         - file that does not exist.
         - numbers as filenames.
         - None as filenames.
         - filename inside a tuple.
-
-        :return:
         """
         SubTestCase = namedtuple("SubTestCase", ("f1", "f2", "exc"))
 
@@ -142,11 +128,7 @@ class TestFilecmpCmpCases(unittest.TestCase):
                     cmp(sub_test.f1, sub_test.f2)
 
     def test_filecmp_cmp__performance(self):
-        """
-        Test performance by executing cmp many times with different files and establishing a maximum execution time.
-
-        :return:
-        """
+        """Test performance by executing cmp many times with different files and establishing a maximum execution time."""
         start = time()
         for f1, f2 in (
             (self.test_files_base_path.joinpath("empty_file_1.txt"),

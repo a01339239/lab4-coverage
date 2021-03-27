@@ -5,16 +5,17 @@ from time import time
 
 
 class TestMathCeilCases(unittest.TestCase):
+    """Test cases for math ceil function."""
+
     def test_math_ceil__boundary_conditions(self):
         """
-        Test boundary conditions with:
+        Test boundary conditions.
+
         - 0
         - almost 0 that should lead to 1.
         - almost 1 that should lead to 1.
         - almost -1 that should lead to 0.
         - almost 0 (from left) that should lead to 0.
-
-        :return:
         """
         SubTestCase = namedtuple("SubTestCase", ("ceil_arg", "expected"))
 
@@ -32,11 +33,7 @@ class TestMathCeilCases(unittest.TestCase):
                 self.assertEqual(ceil(sub_test.ceil_arg), sub_test.expected)
 
     def test_math_ceil__inverse_relationships(self):
-        """
-        Inverse relationship tests with floor().
-
-        :return:
-        """
+        """Inverse relationship tests with floor()."""
         SubTestCase = namedtuple("SubTestCase", ("ceil_arg", "floor_arg"))
 
         sub_tests = (
@@ -53,11 +50,7 @@ class TestMathCeilCases(unittest.TestCase):
                 self.assertEqual(ceil(sub_test.ceil_arg), floor(sub_test.floor_arg))
 
     def test_math_ceil__cross_checking(self):
-        """
-        Cross-checking tests with round.
-
-        :return:
-        """
+        """Cross-checking tests with round."""
         SubTestCase = namedtuple("SubTestCase", ("ceil_arg", "round_arg"))
 
         sub_tests = (
@@ -75,13 +68,12 @@ class TestMathCeilCases(unittest.TestCase):
 
     def test_math_ceil__error_conditions(self):
         """
-        Test error conditions with:
+        Test error conditions.
+
         - inf/-inf number.
         - numeric string.
         - tuple of integers.
         - None.
-
-        :return:
         """
         SubTestCase = namedtuple("SubTestCase", ("ceil_arg", "exc"))
 
@@ -100,11 +92,7 @@ class TestMathCeilCases(unittest.TestCase):
                     ceil(sub_test.ceil_arg)
 
     def test_math_ceil__performance(self):
-        """
-        Test performance by executing ceil() many times and requiring a maximum execution time.
-
-        :return:
-        """
+        """Test performance by executing ceil() many times and requiring a maximum execution time."""
         start = time()
         for arg in (
             0,
