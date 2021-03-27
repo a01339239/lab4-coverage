@@ -23,7 +23,7 @@ def find_number():
         print(f"Your guess {user_guess}.")
         num_of_guesses += 1
         if user_guess == random_int:
-            print(f"You guess is exactly right.")
+            print(f"Your guess is exactly right.")
             break
         elif user_guess > random_int:
             print(f"Your guess is too high.")

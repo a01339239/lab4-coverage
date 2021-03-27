@@ -1,13 +1,14 @@
 import sys
 import os
 import re
+from typing import Optional
 
 FILE_NAME = os.path.join(os.path.dirname(os.path.abspath(__file__)), "find_words_file.txt")
 
 
-def find_words(args: list):
-    """Find words repeated in provided file."""
-    if not args:
+def find_words(words: Optional[list]):
+    """Find how many times the words are repeated in provided file."""
+    if not words:
         sys.exit("No words provided")
 
     try:
@@ -15,7 +16,7 @@ def find_words(args: list):
     except IOError:
         sys.exit("File does not exist")
 
-    words_dict = {arg: 0 for arg in sys.argv[1:] if re.match(r"\w+", arg) is not None}
+    words_dict = {w: 0 for w in words if re.match(r"\w+", w) is not None}
 
     find_re = re.compile(r"\b\w+\b")
     for line in file:

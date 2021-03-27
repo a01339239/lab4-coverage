@@ -1,0 +1,59 @@
+[
+  {
+    "randint": 10,
+    "user_inputs": [10],
+    "print_calls": [
+      "Your guess 10.",
+      "Your guess is exactly right.",
+      "Thanks for playing! You tried 1 times."
+    ]
+  },
+  {
+    "randint": 4,
+    "user_inputs": [1, 2, 4],
+    "print_calls": [
+      "Your guess 1.",
+      "Your guess is too low.",
+      "Your guess 2.",
+      "Your guess is too low.",
+      "Your guess 4.",
+      "Your guess is exactly right.",
+      "Thanks for playing! You tried 3 times."
+    ]
+  },
+  {
+    "randint": 12,
+    "user_inputs": [21, 1, 15, 7, 13, 12],
+    "print_calls": [
+      "Your guess 21.",
+      "Your guess is too high.",
+      "Your guess 1.",
+      "Your guess is too low.",
+      "Your guess 15.",
+      "Your guess is too high.",
+      "Your guess 7.",
+      "Your guess is too low.",
+      "Your guess 13.",
+      "Your guess is too high.",
+      "Your guess 12.",
+      "Your guess is exactly right.",
+      "Thanks for playing! You tried 6 times."
+    ]
+  },
+  {
+    "randint": 15,
+    "user_inputs": [1, 10, 20, 16, "exit"],
+    "print_calls": [
+      "Your guess 1.",
+      "Your guess is too low.",
+      "Your guess 10.",
+      "Your guess is too low.",
+      "Your guess 20.",
+      "Your guess is too high.",
+      "Your guess 16.",
+      "Your guess is too high.",
+      "Exiting...",
+      "Thanks for playing! You tried 4 times."
+    ]
+  }
+]

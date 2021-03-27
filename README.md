@@ -16,6 +16,23 @@ lab3\directory.py       55      0     12      1    99%   56->62
 TOTAL                  107      0     36      1    99%
 ```
 
+### Coverage results after adding tests for find_words() and find_numbers().
+```
+Name                  Stmts   Miss Branch BrPart  Cover   Missing
+-----------------------------------------------------------------
+lab1\__init__.py          0      0      0      0   100%
+lab1\convert_2x.py       17      0     10      0   100%
+lab1\find_number.py      28      3      8      1    89%   19-21, 30->12
+lab1\find_words.py       20      2     12      0    94%   16-17
+lab2\__init__.py          0      0      0      0   100%
+lab2\converters.py       23      0     12      0   100%
+lab2\profit.py           11      0      2      0   100%
+lab3\__init__.py          0      0      0      0   100%
+lab3\directory.py        55      0     12      1    99%   65->71
+-----------------------------------------------------------------
+TOTAL                   154      5     56      2    97%
+```
+
 ## Pydocstyle.
 ### Initial pydocstyle results.
 ```
@@ -80,3 +97,5 @@ TOTAL                  107      0     36      1    99%
 .\tests\test_find_words.py:6 in public method `test_find_words`:
         D102: Missing docstring in public method
 ```
+
+### No more pydocstyle warnings at the end :).

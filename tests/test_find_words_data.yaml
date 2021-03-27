@@ -1,0 +1,58 @@
+word_found_once:
+    words:
+      - Hello
+    lines:
+      - Hello, it's me
+      - I was wondering if after all these years you'd like to meet
+      - To go over everything
+      - They say that time's supposed to heal ya
+      - But I ain't done much healing
+      - ""
+      - Hello, can you hear me?
+    results: "Hello: 2"
+
+many_words_found_once:
+    words:
+      - Hello
+      - me
+      - To
+      - heal
+    lines:
+      - Hello, it's me
+      - I was wondering if after all these years you'd like to meet
+      - To go over everything
+      - They say that time's supposed to heal ya
+      - But I ain't done much healing
+      - ""
+    results: "Hello: 1\nme: 1\nTo: 1\nheal: 1"
+
+many_words_found_many_times:
+    words:
+      - Hello
+      - to
+      - I
+      - me
+    lines:
+      - Hello, it's me
+      - I was wondering if after all these years you'd like to meet
+      - To go over everything
+      - They say that time's supposed to heal ya
+      - But I ain't done much healing
+      - ""
+      - Hello, can you hear me?
+    results: "Hello: 2\nto: 2\nI: 2\nme: 2"
+
+many_words_not_found:
+    words:
+      - My
+      - mind
+      - set
+    lines:
+      - Hello, it's me
+      - I was wondering if after all these years you'd like to meet
+      - To go over everything
+      - They say that time's supposed to heal ya
+      - But I ain't done much healing
+      - ""
+      - Hello, can you hear me?
+    results: "My: 0\nmind: 0\nset: 0"
