@@ -21,11 +21,12 @@ class TestFindWordCases(TestCase):
 
     @patch("builtins.open")
     @patch.object(sys, "exit")
-    def test_find_words__files_does_not_exist(self, mock_sys_exit, mock_open):
+    def test_find_words__file_does_not_exist(self, mock_sys_exit, mock_open):
         """Test sys.exit arguments when file does not exist."""
         mock_sys_exit.side_effect = Exception()
+        mock_open.side_effect = IOError()
         with self.assertRaises(Exception):
-            mock_open.side_effect = IOError()
+            find_words(words=["word"])
             mock_sys_exit.assert_called_once_with("File does not exist")
 
     @patch("builtins.open")

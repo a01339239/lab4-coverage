@@ -9,6 +9,18 @@
     ]
   },
   {
+    "randint": 22,
+    "user_inputs": [1, "a", 22],
+    "print_calls": [
+      "Your guess 1.",
+      "Your guess is too low.",
+      "Please use ints. Your input: a.",
+      "Your guess 22.",
+      "Your guess is exactly right.",
+      "Thanks for playing! You tried 2 times."
+    ]
+  },
+  {
     "randint": 4,
     "user_inputs": [1, 2, 4],
     "print_calls": [

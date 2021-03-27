@@ -27,7 +27,7 @@ def find_number():
             break
         elif user_guess > random_int:
             print(f"Your guess is too high.")
-        elif user_guess < random_int:
+        else:
             print(f"Your guess is too low.")
 
     result_text = f"Thanks for playing! You tried {num_of_guesses} times."

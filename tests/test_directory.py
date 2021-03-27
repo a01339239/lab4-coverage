@@ -36,6 +36,7 @@ class TestDirectoryCases(TestCase):
         - deleting a record that does no exist.
         - looking for records that match the same filter.
         - looking for a record that does not exist.
+        - looking for a record without proving email or age.
         """
         # Create and look for record with custom id
         r1 = self.get_random_record(id_="1")
@@ -52,6 +53,9 @@ class TestDirectoryCases(TestCase):
 
         # Look for a record that does not exist
         self.assertListEqual(self.directory.look_for_record(email="nope@email.com"), [])
+
+        # Look for a record without email or age
+        self.assertListEqual(self.directory.look_for_record(), [])
 
     @mock.patch("lab3.directory.pprint")
     def test_directory__inverse_relationships(self, mock_print):
