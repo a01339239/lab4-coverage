@@ -4,12 +4,7 @@ STR_DIGITS = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 
 def int_to_str(_int: int) -> str:
-    """
-    Convert int to str not using python bifs.
-
-    :param _int:
-    :return:
-    """
+    """Convert int to str not using python bifs."""
     if _int == 0:
         return "0"
 
@@ -25,12 +20,7 @@ def int_to_str(_int: int) -> str:
 
 
 def str_to_int(_str: str) -> Optional[int]:
-    """
-    Convert str to int not using python bifs.
-
-    :param _str:
-    :return:
-    """
+    """Convert str to int not using python bifs."""
     if _str in ["", "-"]:
         return None
 

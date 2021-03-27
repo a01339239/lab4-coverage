@@ -6,6 +6,7 @@ FILE_NAME = os.path.join(os.path.dirname(os.path.abspath(__file__)), "find_words
 
 
 def find_words(args: list):
+    """Find words repeated in provided file."""
     if not args:
         sys.exit("No words provided")
 

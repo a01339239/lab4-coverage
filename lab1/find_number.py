@@ -2,6 +2,7 @@ import random
 
 
 def find_number():
+    """Execute game of finding number."""
     lower_limit, upper_limit = 1, 30
     random_int = random.randint(lower_limit, upper_limit)
 

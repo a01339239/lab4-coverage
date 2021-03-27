@@ -8,6 +8,8 @@ from pprint import pprint
 
 @dataclass
 class Record:
+    """Record model."""
+
     name: str
     email: str
     age: int
@@ -15,16 +17,21 @@ class Record:
     id: Optional[str] = None
 
     def __post_init__(self):
+        """Add id if not included when initializing."""
         self.id = self.id or str(uuid4())
 
 
 class Directory:
+    """Directory model."""
+
     file_path = Path.joinpath(Path.cwd(), "lab3", "directory.json")
 
     def __init__(self):
+        """Initialize file with empty list."""
         self.file_path.write_text("[]")
 
     def add_record(self, record: Record):
+        """Add record to directory json."""
         with open(self.file_path, "r+") as file:
             directory = jload(file)
             directory.append(asdict(record))
@@ -33,6 +40,7 @@ class Directory:
             jdump(directory, file)
 
     def delete_record(self, id: str) -> int:
+        """Delete record from directory json."""
         records_deleted = 0
         with open(self.file_path, "r+") as file:
             directory = jload(file)
@@ -52,6 +60,7 @@ class Directory:
     def look_for_record(
         self, email: Optional[str] = None, age: Optional[int] = None
     ) -> List[Record]:
+        """Look for record in directory json."""
         match_records = list()
         if any((email, age)):
             with open(self.file_path, "r") as file:
@@ -62,6 +71,7 @@ class Directory:
         return match_records
 
     def display_all_records(self):
+        """Display all records from directory json."""
         with open(self.file_path, "r") as file:
             directory = jload(file)
             pprint(directory)

@@ -1,7 +1,5 @@
-import sys
-
-
-def decimal_to_base(dec_num, base):
+def decimal_to_base(dec_num: int, base: int) -> int:
+    """Convert decimal number to base number."""
     if dec_num == 0:
         return [0]
     new_base_num = list()
@@ -11,7 +9,8 @@ def decimal_to_base(dec_num, base):
     return new_base_num[::-1]
 
 
-def decimal_to_bin(dec_num):
+def decimal_to_bin(dec_num: int) -> int:
+    """Convert decimal number to binary number."""
     bin_list = [str(num) for num in decimal_to_base(dec_num, 2)]
     bin_num = "0b" + "".join(bin_list)
     return bin_num
@@ -20,7 +19,8 @@ def decimal_to_bin(dec_num):
 HEX_CHAR_LIST = [*[str(num) for num in range(0, 10)], "a", "b", "c", "d", "e", "f"]
 
 
-def decimal_to_hex(dec_num):
+def decimal_to_hex(dec_num: int) -> int:
+    """Convert decimal number to hex number."""
     hex_list = [HEX_CHAR_LIST[num] for num in decimal_to_base(dec_num, 16)]
     hex_num = "0x" + "".join(hex_list)
     return hex_num
