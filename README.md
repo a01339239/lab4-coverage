@@ -101,7 +101,7 @@ TOTAL                   153      0     54      0   100%
         D104: Missing docstring in public package
 ```
 ### pydocstyle results after first fixes. 
-(Check this [commit](https://github.com/a01339239/lab4-coverage/commit/e88b8e4e8cbefc8f35ea5d6c205402dd7e9dd361) and this [commit](https://github.com/a01339239/lab4-coverage/tree/1eb67ce7c71b0578004138d709ca6d47fdcefedd))
+Check this [commit](https://github.com/a01339239/lab4-coverage/commit/e88b8e4e8cbefc8f35ea5d6c205402dd7e9dd361) and this [commit](https://github.com/a01339239/lab4-coverage/commit/1eb67ce7c71b0578004138d709ca6d47fdcefedd)
 ```
 .\tests\test_find_number.py:4 in public class `TestFindNumberCases`:
         D101: Missing docstring in public class
