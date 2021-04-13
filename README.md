@@ -249,3 +249,18 @@ Check Information
        Tools Run: dodgy, mccabe, pep8, profile-validator, pyflakes, pylint
   Messages Found: 5
 ```
+
+### Results after attending prospector report.
+```
+Check Information
+=================
+         Started: 2021-04-12 20:53:49.317067
+        Finished: 2021-04-12 20:53:51.366867
+      Time Taken: 2.05 seconds
+       Formatter: grouped
+        Profiles: default, no_doc_warnings, no_test_warnings, strictness_medium, strictness_high, strictness_veryhigh, no_member_warnings
+      Strictness: None
+  Libraries Used:
+       Tools Run: dodgy, mccabe, pep8, profile-validator, pyflakes, pylint
+  Messages Found: 0
+```

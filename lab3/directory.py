@@ -39,7 +39,7 @@ class Directory:
             file.truncate()
             jdump(directory, file)
 
-    def delete_record(self, id: str) -> int:
+    def delete_record(self, _id: str) -> int:
         """Delete record from directory json."""
         records_deleted = 0
         with open(self.file_path, "r+") as file:
@@ -47,7 +47,7 @@ class Directory:
             index = 0
             while index < len(directory):
                 record = directory[index]
-                if record["id"] == id:
+                if record["id"] == _id:
                     del directory[index]
                     records_deleted += 1
                     index -= 1

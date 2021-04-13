@@ -44,7 +44,7 @@ class TestDirectoryCases(TestCase):
         self.assertListEqual(self.directory.look_for_record(email=r1.email), [r1])
 
         # Delete a record that does not exist
-        self.assertEqual(self.directory.delete_record(id="2"), 0)
+        self.assertEqual(self.directory.delete_record(_id="2"), 0)
 
         # Look for a record that is repeated
         self.directory.add_record(r1)
@@ -160,5 +160,5 @@ class TestDirectoryCases(TestCase):
         # Delete many records from dir
         start = time()
         for rec in recs:
-            self.directory.delete_record(id=rec.id)
+            self.directory.delete_record(_id=rec.id)
         self.assertLessEqual(time() - start, 0.3)

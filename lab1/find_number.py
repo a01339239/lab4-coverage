@@ -23,12 +23,12 @@ def find_number():
         print(f"Your guess {user_guess}.")
         num_of_guesses += 1
         if user_guess == random_int:
-            print(f"Your guess is exactly right.")
+            print("Your guess is exactly right.")
             break
-        elif user_guess > random_int:
-            print(f"Your guess is too high.")
+        if user_guess > random_int:
+            print("Your guess is too high.")
         else:
-            print(f"Your guess is too low.")
+            print("Your guess is too low.")
 
     result_text = f"Thanks for playing! You tried {num_of_guesses} times."
     print(result_text)
