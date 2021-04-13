@@ -118,6 +118,7 @@ Check this [commit](https://github.com/a01339239/lab4-coverage/commit/e88b8e4e8c
 
 ## Prospector.
 ### Initial results.
+Check this [commit](https://github.com/a01339239/lab4-coverage/commit/90cfb0cc17efcbdcb50387f2da718a63647b925f).
 ```
 Messages
 ========
@@ -152,10 +153,13 @@ Check Information
 ```
 
 ### Prospector script.
+Check this [commit](https://github.com/a01339239/lab4-coverage/commit/0ad80a7d64ac4e3f555a4700dec48bd2c92d6eef). 
+
 Executed with
 ```
 prospector_analysis.sh
 ```
+Which can be found [here](https://github.com/a01339239/lab4-coverage/blob/main/prospector_analysis.sh).
 
 Results
 ```
@@ -251,6 +255,7 @@ Check Information
 ```
 
 ### Results after attending prospector report.
+Check this [commit](https://github.com/a01339239/lab4-coverage/commit/44fdec3858b9a7b772306c6d6c8a16c168b3020a).
 ```
 Check Information
 =================
