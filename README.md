@@ -112,3 +112,38 @@ TOTAL                   153      0     54      0   100%
         D102: Missing docstring in public method
 ```
 ### No more pydocstyle warnings at the end :).
+
+## Prospector.
+### Initial results.
+```
+Messages
+========
+
+lab1\find_number.py
+  Line: 25
+    pylint: no-else-break / Unnecessary "elif" after "break" (col 8)
+  Line: 26
+    pylint: f-string-without-interpolation / Using an f-string that does not have any interpolated variables (col 18)
+  Line: 29
+    pylint: f-string-without-interpolation / Using an f-string that does not have any interpolated variables (col 18)
+  Line: 31
+    pylint: f-string-without-interpolation / Using an f-string that does not have any interpolated variables (col 18)
+
+lab3\directory.py
+  Line: 42
+    pylint: redefined-builtin / Redefining built-in 'id' (col 28)
+
+
+
+Check Information
+=================
+         Started: 2021-04-12 18:41:23.308252
+        Finished: 2021-04-12 18:41:24.900165
+      Time Taken: 1.59 seconds
+       Formatter: grouped
+        Profiles: default, no_doc_warnings, no_test_warnings, strictness_medium, strictness_high, strictness_veryhigh, no_member_warnings
+      Strictness: None
+  Libraries Used:
+       Tools Run: dodgy, mccabe, pep8, profile-validator, pyflakes, pylint
+  Messages Found: 5
+```
