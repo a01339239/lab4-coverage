@@ -150,3 +150,102 @@ Check Information
        Tools Run: dodgy, mccabe, pep8, profile-validator, pyflakes, pylint
   Messages Found: 5
 ```
+
+### Prospector script.
+Executed with
+```
+prospector_analysis.sh
+```
+
+Results
+```
+Repo already exists.
+Python3 is installed.
+Pip3 is installed.
+Virtual env created.
+Reqs file found! Installing dependencies.
+Requirement already satisfied: coverage==5.5 in ./venv/lib/python3.8/site-packages (from -r ./lab4-coverage/reqs.txt (line 1)) (5.5)
+Requirement already satisfied: ddt==1.4.2 in ./venv/lib/python3.8/site-packages (from -r ./lab4-coverage/reqs.txt (line 2)) (1.4.2)
+Requirement already satisfied: pydocstyle==6.0.0 in ./venv/lib/python3.8/site-packages (from -r ./lab4-coverage/reqs.txt (line 3)) (6.0.0)
+Requirement already satisfied: PyYAML==5.4.1 in ./venv/lib/python3.8/site-packages (from -r ./lab4-coverage/reqs.txt (line 4)) (5.4.1)
+Requirement already satisfied: snowballstemmer==2.1.0 in ./venv/lib/python3.8/site-packages (from -r ./lab4-coverage/reqs.txt (line 5)) (2.1.0)
+Prospector installed.
+Running prospector.
+Report of results. Stored in report.txt.
+Messages
+========
+
+lab1.find_number (lab4-coverage/lab1/find_number.py):
+    L26:18 find_number: pylint - f-string-without-interpolation
+    Using an f-string that does not have any interpolated variables
+
+lab1.find_number (lab4-coverage/lab1/find_number.py):
+    L29:18 find_number: pylint - f-string-without-interpolation
+    Using an f-string that does not have any interpolated variables
+
+lab1.find_number (lab4-coverage/lab1/find_number.py):
+    L31:18 find_number: pylint - f-string-without-interpolation
+    Using an f-string that does not have any interpolated variables
+
+lab1.find_number (lab4-coverage/lab1/find_number.py):
+    L25:8 find_number: pylint - no-else-break
+    Unnecessary "elif" after "break"
+
+lab3.directory (lab4-coverage/lab3/directory.py):
+    L42:28 Directory.delete_record: pylint - redefined-builtin
+    Redefining built-in 'id'
+
+
+
+Check Information
+=================
+         Started: 2021-04-12 19:55:15.117295
+        Finished: 2021-04-12 19:55:17.093268
+      Time Taken: 1.98 seconds
+       Formatter: text
+        Profiles: default, no_doc_warnings, no_test_warnings, strictness_medium, strictness_high, strictness_veryhigh, no_member_warnings
+      Strictness: None
+  Libraries Used:
+       Tools Run: dodgy, mccabe, pep8, profile-validator, pyflakes, pylint
+  Messages Found: 5
+```
+
+report.txt contents
+```
+Messages
+========
+
+lab1.find_number (lab4-coverage/lab1/find_number.py):
+    L26:18 find_number: pylint - f-string-without-interpolation
+    Using an f-string that does not have any interpolated variables
+
+lab1.find_number (lab4-coverage/lab1/find_number.py):
+    L29:18 find_number: pylint - f-string-without-interpolation
+    Using an f-string that does not have any interpolated variables
+
+lab1.find_number (lab4-coverage/lab1/find_number.py):
+    L31:18 find_number: pylint - f-string-without-interpolation
+    Using an f-string that does not have any interpolated variables
+
+lab1.find_number (lab4-coverage/lab1/find_number.py):
+    L25:8 find_number: pylint - no-else-break
+    Unnecessary "elif" after "break"
+
+lab3.directory (lab4-coverage/lab3/directory.py):
+    L42:28 Directory.delete_record: pylint - redefined-builtin
+    Redefining built-in 'id'
+
+
+
+Check Information
+=================
+         Started: 2021-04-12 19:55:15.117295
+        Finished: 2021-04-12 19:55:17.093268
+      Time Taken: 1.98 seconds
+       Formatter: text
+        Profiles: default, no_doc_warnings, no_test_warnings, strictness_medium, strictness_high, strictness_veryhigh, no_member_warnings
+      Strictness: None
+  Libraries Used:
+       Tools Run: dodgy, mccabe, pep8, profile-validator, pyflakes, pylint
+  Messages Found: 5
+```
